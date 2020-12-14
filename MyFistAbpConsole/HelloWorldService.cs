@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,9 +13,22 @@ namespace MyFistAbpConsole
     /// </summary>
     public class HelloWorldService : ITransientDependency
     {
+        private readonly MyOptions _options;
+        public HelloWorldService(IOptions<MyOptions> options)
+        {
+            _options = options.Value;
+        }
+        public void DoIt()
+        {
+            var v1 = _options.Value1;
+            var v2 = _options.Value2;
+            Console.WriteLine(v1 + v2);
+        }
+
+        public string Name = "Hello Word";
         public void SayHello()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(Name);
         }
 
     }

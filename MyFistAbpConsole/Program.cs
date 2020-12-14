@@ -18,7 +18,9 @@ namespace MyFistAbpConsole
             // GetService/GetRequiredService  必须using Microsoft.Extensions.DependencyInjection;
             // 最好使用GetRequiredService  因为如果出错 报错更快 https://www.cnblogs.com/yilezhu/p/11107648.html 
             var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
+            helloWoldService.Name = "这里是框架自动把服务注册到容器";
             helloWoldService.SayHello();
+            helloWoldService.DoIt();
 
         }
     }
