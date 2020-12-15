@@ -1,7 +1,7 @@
 ﻿/**
 * 命名空间: MyFistAbpConsole
 *
-* 功 能： 选项类
+* 功 能： 选项类  当前的作用相当于 Model 实体
 * 类 名： MyOptions
 *
 * Ver           变更日期                    创建人

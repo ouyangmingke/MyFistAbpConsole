@@ -11,16 +11,26 @@ namespace MyFistAbpConsole
         static void Main(string[] args)
         {
             //AbpApplicationFactory 用于创建应用程序并加载所有以AppModule作为启动模块的模块. Initialize()方法启动应用程序.
-            var application = AbpApplicationFactory.Create<MyFirstAbpConsoleAppModule>();
+            var application = AbpApplicationFactory.Create<Abp_Module>();
             application.Initialize();
 
             // ServiceProvider 引用应用程序使用的根服务提供者。在初始化应用程序之前不能使用它。
             // GetService/GetRequiredService  必须using Microsoft.Extensions.DependencyInjection;
             // 最好使用GetRequiredService  因为如果出错 报错更快 https://www.cnblogs.com/yilezhu/p/11107648.html 
             var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
-            helloWoldService.Name = "这里是框架自动把服务注册到容器";
-            helloWoldService.SayHello();
+
             helloWoldService.DoIt();
+
+            //使用Fac
+            var Afcapplication = AbpApplicationFactory.Create<Afc_Module>(options =>
+            {
+                options.UseAutofac();
+            });
+            Afcapplication.Initialize();
+
+            var AfcService = Afcapplication.ServiceProvider.GetRequiredService<AfcService>();
+            
+            AfcService.DoIt();
 
         }
     }
