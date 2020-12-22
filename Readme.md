@@ -22,7 +22,7 @@ ABP的基础结构就在这里了
 
 ### 依赖注入 DI
 
-> ```
+> ```c#
 >  var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
 > ```
 >
