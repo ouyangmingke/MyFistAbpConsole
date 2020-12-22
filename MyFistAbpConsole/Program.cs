@@ -10,7 +10,7 @@ namespace MyFistAbpConsole
     {
         static void Main(string[] args)
         {
-            //AbpApplicationFactory 用于创建应用程序并加载所有以AppModule作为启动模块的模块. Initialize()方法初始化.
+            //AbpApplicationFactory.Create 加载 Abp_Module 启动模块.块. Initialize()方法初始化.
             var application = AbpApplicationFactory.Create<Abp_Module>();
             application.Initialize();
 

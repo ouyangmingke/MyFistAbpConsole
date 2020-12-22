@@ -2,7 +2,7 @@ ABP的基础结构就在这里了
 
 ### 加载模块
 
-> **AbpApplicationFactory(**) 用于创建应用程序并加载所有以AppModule作为启动模块的模块.
+> **AbpApplicationFactory.Create**  加载 Abp_Module 启动模块.
 >
 > ```c#
 > var application = AbpApplicationFactory.Create<Abp_Module>();
@@ -20,10 +20,10 @@ ABP的基础结构就在这里了
 >
 > 
 
-### 依赖注入 DI
+### 获取依赖
 
 > ```c#
->  var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
+> var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
 > ```
 >
 > 
