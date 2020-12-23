@@ -4,9 +4,11 @@ using System.Text;
 
 using MyFistAbpConsole.Service;
 
+using Volo.Abp.DependencyInjection;
+
 namespace MyFistAbpConsole.Interface
 {
-    public interface IHello
+    public interface IHello : ITransientDependency
     {
         public void Writer();
 

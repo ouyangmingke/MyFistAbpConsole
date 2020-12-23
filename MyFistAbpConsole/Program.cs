@@ -24,6 +24,10 @@ namespace MyFistAbpConsole
             var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
             helloWoldService.DoIt();
 
+            var helloService1 = application.ServiceProvider.GetRequiredService<HelloService>();
+            helloService1.Writer();
+            var helloService2 = application.ServiceProvider.GetRequiredService<Hello2Service>();
+            helloService2.Writer();
             //使用Fac
             var Afcapplication = AbpApplicationFactory.Create<Afc_Module>(options =>
             {
