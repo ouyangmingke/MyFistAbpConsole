@@ -1,12 +1,10 @@
-﻿using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
-namespace MyFistAbpConsole
+using Microsoft.Extensions.Options;
+using MyFistAbpConsole.dependent;
+
+namespace MyFistAbpConsole.Service
 {
-
-
     public class AfcService
     {
         //依赖项 当前的依赖是 Model实体

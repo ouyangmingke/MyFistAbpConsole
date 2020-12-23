@@ -1,14 +1,11 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-using Microsoft.Extensions.DependencyInjection;
+using MyFistAbpConsole.dependent;
+using MyFistAbpConsole.Service;
 
-using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 
-namespace MyFistAbpConsole
+namespace MyFistAbpConsole.Module
 {
 
     /// <summary>
@@ -32,6 +29,10 @@ namespace MyFistAbpConsole
             {
                 options.Value1 = "Abp_Module创建";
                 options.Value2 = "自动";
+            });
+            Configure<HelloDep>((options) =>
+            {
+                options.Hello = "修改默认值";
             });
         }
 

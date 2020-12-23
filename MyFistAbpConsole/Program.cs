@@ -1,7 +1,10 @@
 ﻿using System.Net.Mime;
 using System;
-
-using Microsoft.Extensions.DependencyInjection;//依赖注入
+using Autofac;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using MyFistAbpConsole.Module;
+using MyFistAbpConsole.Service; //依赖注入
 using Volo.Abp;
 
 namespace MyFistAbpConsole
@@ -33,5 +36,6 @@ namespace MyFistAbpConsole
             AfcService.DoIt();
 
         }
+
     }
 }

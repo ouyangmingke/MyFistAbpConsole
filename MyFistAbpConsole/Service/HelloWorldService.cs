@@ -1,11 +1,9 @@
-﻿using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using Microsoft.Extensions.Options;
+using MyFistAbpConsole.dependent;
+using Volo.Abp.DependencyInjection; //依赖注入
 
-using Volo.Abp.DependencyInjection;//依赖注入
-
-namespace MyFistAbpConsole
+namespace MyFistAbpConsole.Service
 {
     /// <summary>
     /// 服务类     需要把服务注册到容器中

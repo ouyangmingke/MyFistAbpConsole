@@ -1,12 +1,11 @@
 ﻿using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using MyFistAbpConsole.dependent;
+using MyFistAbpConsole.Service;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 
-namespace MyFistAbpConsole
+namespace MyFistAbpConsole.Module
 {
     /// <summary>
     /// 把Autofac模块添加到当前模块中来
