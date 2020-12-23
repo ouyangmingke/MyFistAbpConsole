@@ -29,7 +29,7 @@ namespace MyFistAbpConsole
             context.Services.Configure<MyOptions>((options) =>
             {
                 options.Value1 = "Afc_Module创建";
-                options.Value2 = true;
+                options.Value2 = "手动";
             });
         }
 

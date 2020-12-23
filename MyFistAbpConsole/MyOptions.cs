@@ -21,7 +21,13 @@ namespace MyFistAbpConsole
 {
     public class MyOptions
     {
+        public MyOptions(string _value1, string _value2)
+        {
+            Value1 = _value1;
+            Value2 = _value2;
+        }
+
         public string Value1 { get; set; }
-        public bool Value2 { get; set; }
+        public string Value2 { get; set; }
     }
 }

@@ -19,7 +19,6 @@ namespace MyFistAbpConsole
             // 注入依赖
             // 最好使用GetRequiredService  因为如果出错 报错更快 https://www.cnblogs.com/yilezhu/p/11107648.html 
             var helloWoldService = application.ServiceProvider.GetRequiredService<HelloWorldService>();
-
             helloWoldService.DoIt();
 
             //使用Fac
@@ -30,7 +29,7 @@ namespace MyFistAbpConsole
             Afcapplication.Initialize();
 
             var AfcService = Afcapplication.ServiceProvider.GetRequiredService<AfcService>();
-            
+
             AfcService.DoIt();
 
         }
