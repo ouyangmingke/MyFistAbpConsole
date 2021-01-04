@@ -21,9 +21,9 @@ namespace MyFistAbpConsole.Module
         /// <param name="context"></param>
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            // 在此处注入依赖项   把服务放到容器中
-            // 模块会在容器中寻找符合的依赖进行注入
-            // 如果没有找到会自动的New一个进行注入
+            // 在此处注入依赖项   把依赖放到容器中
+            // 模块会在容器中寻找符合的服务进行注入
+            // 如果服务没有找到合适的依赖会自动的New一个进行注入
             //（context.Services. ）可以省略
             context.Services.Configure<MyOptions>((options) =>
             {

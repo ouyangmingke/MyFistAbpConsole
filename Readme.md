@@ -8,7 +8,9 @@ ABP的基础结构就在这里了
 > var application = AbpApplicationFactory.Create<Abp_Module>();
 > ```
 >
-> 
+> #### ConfigureServices（）模块中的方法 配置服务
+>
+> 向容器中添加依赖
 
 ### 初始化模块
 
@@ -28,3 +30,4 @@ ABP的基础结构就在这里了
 >
 > 
 
+#### [【ASP.NET Core】依赖注入高级玩法——如何注入多个服务实现类](https://www.cnblogs.com/tcjiaan/p/8732848.html)
