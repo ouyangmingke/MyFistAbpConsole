@@ -12,13 +12,17 @@ namespace MyFistAbpConsole.Service
     /// <summary>
     /// 服务类     需要把服务注册到容器中 通过继承来把服务放到容器中
     /// 继承 TFDI 抽象类
-    /// 继承ITransientDependency接口（瞬态的 生命周期） 其中一种方法
+    /// 继承ITransientDependency接口（瞬态的 生命周期） 其中一种方法   
     /// </summary>
     public class HelloWorldService : TFDI, ITransientDependency
     {
         //依赖项 当前的依赖是 Model实体
         private readonly MyOptions _options;
-        //获取依赖的开放方法
+
+        /// <summary>
+        /// 获取依赖的开放方法
+        /// </summary>
+        /// <param name="options">注入配置类需要用IOptions接口</param>
         public HelloWorldService(IOptions<MyOptions> options)
         {
             TF = "HelloWorldService——依赖已经注入";

@@ -20,7 +20,22 @@ ABP的基础结构就在这里了
 > application.Initialize();
 > ```
 >
-> 
+
+### 注入依赖
+
+> 1. #### 依赖接口
+>
+>    如果实现这些接口,则会自动将类注册到依赖注入:
+>
+>    - `ITransientDependency` 注册为transient生命周期.
+>- `ISingletonDependency` 注册为singleton生命周期.
+> 	- `IScopedDependency` 注册为scoped生命周期.
+>
+> 2. #### 手动注入
+>
+>   
+
+
 
 ### 获取依赖
 

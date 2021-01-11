@@ -25,13 +25,17 @@ namespace MyFistAbpConsole.Module
             // 模块会在容器中寻找符合的服务进行注入
             // 如果服务没有找到合适的依赖会自动的New一个进行注入
             //（context.Services. ）可以省略
+            // 这种写法 都是 用来注入配置项目的 
+            // 注入服务得看 Afc_Module
             context.Services.Configure<MyOptions>((options) =>
             {
                 options.Value1 = "Abp_Module创建";
                 options.Value2 = "自动";
             });
+            //这里是简写的  
             Configure<HelloDep>((options) =>
             {
+                options.IsEnabled = true;
                 options.Hello = "修改默认值";
             });
         }

@@ -16,6 +16,9 @@
 
 namespace MyFistAbpConsole.dependent
 {
+    /// <summary>
+    /// 配置类
+    /// </summary>
     public class MyOptions
     {
         public string Value1 { get; set; }
